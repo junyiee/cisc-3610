@@ -14,13 +14,20 @@ function draw() {
     drawTreeAt(ctx,840,365,90,20,30);
     drawTreeAt(ctx,765,415,90,20,30);
     drawHouseAt(ctx,800,500);
-    drawHouseAt(ctx,620,450);
+    drawHouseAt(ctx,615,450);
     drawSunAt(ctx,670,150,70);
     drawCloudAt(ctx,100,135);
     drawCloudAt(ctx,800,150);
     drawCloudAt(ctx,1000,120);
     drawCloudAt(ctx,300,165);
     drawCloudAt(ctx,1230,200);
+
+    // caption on canvas
+    ctx.font = "70px Arial";
+    ctx.strokeText("Imagine", 60, 400);
+    ctx.strokeText("Very", 100, 500);
+    ctx.strokeText("Artistic", 1060, 400);
+    ctx.strokeText("Scenary", 1040, 500);
   
     ctx.restore();
   }
@@ -38,20 +45,68 @@ function drawTreeAt(ctx,x,y,height,width,radius) {
 }
   
 function drawHouseAt(ctx,x,y) {
+  // roof
   ctx.beginPath();
-  // draws front structure
   ctx.moveTo(x, y);
-  ctx.lineTo(x-25, y+35);
-  ctx.lineTo(x-25, y+85);
-  ctx.lineTo(x+25, y+85);
-  ctx.lineTo(x+25, y+35);
+  ctx.lineTo(x-30, y+35);
+  ctx.lineTo(x+30, y+35);
   ctx.lineTo(x, y);
-  // draws side structure
+  ctx.fillStyle = "#5C4033";
+  ctx.fill();
+  ctx.stroke();
+  // front face
+  ctx.beginPath();
+  ctx.moveTo(x-30, y+35);
+  ctx.lineTo(x-30, y+85);
+  ctx.lineTo(x+30, y+85);
+  ctx.lineTo(x+30, y+35);
+  ctx.fillStyle = "#FFE4B5";
+  ctx.fill();
+  ctx.stroke();
+  // side roof
+  ctx.beginPath();
   ctx.moveTo(x, y);
-  ctx.lineTo(x+15, y-10);
-  ctx.lineTo(x+40, y+25);
-  ctx.lineTo(x+40, y+70);
-  ctx.lineTo(x+25, y+85);
+  ctx.lineTo(x+20, y-10);
+  ctx.lineTo(x+48, y+23);
+  ctx.lineTo(x+30, y+35);
+  ctx.fillStyle = "#5C4033";
+  ctx.fill();
+  ctx.stroke();
+  // side face
+  ctx.beginPath();
+  ctx.moveTo(x+48, y+23);
+  ctx.lineTo(x+48, y+70);
+  ctx.lineTo(x+30, y+85);
+  ctx.lineTo(x+30, y+35);
+  ctx.fillStyle = "#FFE4B5";
+  ctx.fill();
+  ctx.stroke();
+  // door
+  ctx.beginPath();
+  ctx.moveTo(x-25, y+85);
+  ctx.lineTo(x-25, y+55);
+  ctx.lineTo(x-7, y+55);
+  ctx.lineTo(x-7, y+85);
+  ctx.fillStyle = "brown";
+  ctx.fill();
+  ctx.stroke();
+  // window
+  ctx.beginPath();
+  ctx.moveTo(x, y+50);
+  ctx.lineTo(x, y+70);
+  ctx.lineTo(x+20, y+70);
+  ctx.lineTo(x+20, y+50);
+  ctx.lineTo(x, y+50);
+  ctx.fillStyle = "white";
+  ctx.fill();
+  ctx.stroke();
+  // window bars
+  ctx.beginPath();
+  ctx.moveTo(x, y+60);
+  ctx.lineTo(x+20, y+60);
+  ctx.stroke();
+  ctx.moveTo(x+10, y+50);
+  ctx.lineTo(x+10, y+70);
   ctx.stroke();
 }
 
