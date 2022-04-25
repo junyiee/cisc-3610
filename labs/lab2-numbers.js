@@ -20,7 +20,7 @@ let numbers = {
 				"h": 135
 			}
 		},
-        {"filename": "number1.png",
+		{"filename": "number1.png",
 			"frame": {
 				"x": 108,
 				"y": 1,
