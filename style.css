@@ -13,8 +13,6 @@ canvas {
 }
 
 .summary {
-    /*background-color: #549DA0;*/
-    /*background-color: #89B0AE;*/
     background-color: #607B7D;
     color: aliceblue;
     padding: 13rem;
@@ -22,12 +20,10 @@ canvas {
 
 #eduExp {
     background-color: #D9D9D9;
-    /*background-color: #FAF9F9;*/
     padding: 7rem;
 }
 
 #skills {
-    /*background-color: #3B7091;*/
     background-color: #555B6E;
     color: aliceblue;
     padding: 1rem;
