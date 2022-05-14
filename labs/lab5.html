@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <title>Lab 5: Audio</title>
+    </head>
+    <body>
+        <div id="machine">
+            <button onclick="playAudio('arcade')" type="button">Arcade</button>
+            <audio id="arcade">
+                <source src="./sounds/arcade.mp3" type="audio/mp3">
+            </audio>
+
+            <button onclick="playAudio('birds')" type="button">Birds</button>
+            <audio id="birds">
+                <source src="./sounds/birds.mp3" type="audio/mp3">
+            </audio>
+
+            <button onclick="playAudio('pew')" type="button">Pew</button>
+            <audio id="pew">
+                <source src="./sounds/pewpew.mp3" type="audio/mp3">
+            </audio>
+
+            <button onclick="playAudio('rain')">Rain</button>
+            <audio id="rain">
+                <source src="./sounds/rain.mp3" type="audio/mp3">
+            </audio>
+
+            <button onclick="playAudio('typing')">Typing</button>
+            <audio id="typing">
+                <source src="./sounds/typing.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div>
+            <a href="../index.html">Home</a>
+        </div>
+    </body>
+
+    <script>
+        function playAudio(x) {
+            var audio = document.getElementById(x);
+            audio.play();
+        }
+    </script>
+</html>

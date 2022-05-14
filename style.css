@@ -37,3 +37,19 @@ canvas {
 .carousel-item {
     padding: 5rem 13rem;
 }
+
+#machine {
+    margin: auto;
+    border: 2px solid;
+    padding: 2rem;
+    display: inline-block;
+}
+
+.videos {
+    column-count: 2;
+    text-align: center;
+}
+
+.video {
+    text-align: center;
+}
